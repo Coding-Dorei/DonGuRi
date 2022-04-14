@@ -18,12 +18,11 @@
 <body>
     <div style="width: 80%;height: 80%; align-items: center;">
         <img src="../data/Laplus.gif" alt="" name="laplus">
-        <audio  name="donguri" src="../data/La+ Darkness remix (320 kbps).mp3" loop controls autoplay="true"></audio>
+        <audio onplay="colorChange()" name="donguri" src="../data/La+ Darkness remix (320 kbps).mp3" loop controls autoplay="true"></audio>
     </div>
     <div>
         <p name="target" style="color: #000000;">Don Gu Ri Ko Ro Ko Ro Don Gu Ri Ko~</p>
     </div>
-    <button onclick="colorChange()">눈뽕</button>
 </body>
 <script>
     let r = 255, g = 0, b = 0;
