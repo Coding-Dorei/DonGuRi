@@ -1,0 +1,35 @@
+body{
+    background-color: gray;
+}
+header{
+    width: 100%;
+    height: 15%;
+    align-items: center;
+    text-align:center;
+    background-color: blueviolet;
+}
+header > h1{
+    font: white;
+}
+section{
+    width:100%;
+    height:85%;
+}
+.content{
+    text-align: center;
+}
+#laplus{
+    transition: transform 3s;
+    width: 55%;
+    height: 55%;
+}
+#laplus:hover{
+    transform: rotate(7200deg);
+}
+@keyframes shadowRGB {
+    0%{box-shadow: 0 0 25px red;}
+    25%{box-shadow: 0 0 25px green;}
+    50%{box-shadow: 0 0 25px blue;}
+    75%{box-shadow: 0 0 25px green;}
+    100%{box-shadow: 0 0 25px red;}
+}
