@@ -6,46 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Don-Gu-Ri</title>
     <link rel="shortcut icon" href="../data/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../data/style.css">
 </head>
-<style>
-    img{
-        width: 100%;
-        height: 100%;
-        border: 20px;
-        border-style: solid;
-        border-color: #000000;
-    }
-</style>
 <body>
-    <div style="width: 80%;height: 80%; align-items: center;">
-        <img src="../data/Laplus.gif" alt="" name="laplus">
-        <audio onplay="colorChange()" name="donguri" src="../data/La+ Darkness remix (320 kbps).mp3" loop controls autoplay="true"></audio>
-    </div>
-    <div>
-        <p name="target" style="color: #000000;">Don Gu Ri Ko Ro Ko Ro Don Gu Ri Ko~</p>
-    </div>
+    <header>
+        <label for="glow" style="font-size: 3em;">Project DGR</label>
+        <button id="glow" onclick="toggleColorChange()" hidden></button>
+    </header>
+    <aside>
+        <pre name="textglowing">made by Junsu Lee&NewLine;With Node.js, ejs, CSS, JS</pre>
+    </aside>
+    <section>
+        <div class="content">
+            <img src="../data/Laplus.gif" alt="" id="laplus" name="boxglowing">
+        </div>
+        <div class="content">
+            <audio name="donguri" src="../data/La+ Darkness remix (320 kbps).mp3" loop controls autoplay="true"></audio>
+        </div>
+        <div class="content">
+            <p name="textglowing" style="color: #000000;">Don Gu Ri Ko Ro Ko Ro Don Gu Ri Ko~</p>
+        </div>
+    </section>
 </body>
-<script>
-    let r = 255, g = 0, b = 0;
-    function colorChange(){
-        setInterval(()=>{
-            let p = document.getElementsByName('target')[0]
-            let laplus = document.getElementsByName('laplus')[0]
-            if(r == 255 && g == 0 && b < 255) b++;
-            else if(r > 0 && g == 0 && b == 255) r--;
-            else if(r == 0 && g < 255 && b == 255) g++;
-            else if(r == 0 && g == 255 && b > 0) b--;
-            else if(r < 255 && g == 255 && b == 0) r++;
-            else if(r == 255 && g > 0 &&  b == 0)  g--;
-            
-            color_str = r.toString(16).padStart(2,0).concat(
-                g.toString(16).padStart(2,0),
-                b.toString(16).padStart(2,0)
-            )
-            //console.log(color_str)
-            p.style.color = "#".concat(color_str)
-            laplus.style.borderColor = "#".concat(color_str)
-        },5)
-    }
-</script>
+<script src="../data/textGlow.js"></script>
 </html>
